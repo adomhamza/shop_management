@@ -38,11 +38,13 @@ class _InventoryPageState extends State<InventoryPage> {
             ),
             Container(
               width: double.infinity,
-              child: FlatButton(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(0)),
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  primary: Colors.green,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(0)),
+                  ),
                 ),
-                color: Colors.green,
                 onPressed: () {},
                 child: Container(
                   padding: EdgeInsets.all(20),

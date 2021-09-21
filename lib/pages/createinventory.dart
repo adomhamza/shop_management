@@ -10,11 +10,11 @@ class CreateInventory extends StatefulWidget {
 }
 
 Future<UserModel> createUser(
-    String inventoryName, String inventoryDescription) async {
-  // const url = "https://reqres.in/api/users";
-  //const url = "https://tunishub.com/";
+  String inventoryName,
+  String inventoryDescription,
+) async {
   final response = await http.post(
-      Uri.https('tunishub.com', '/management_api/api/category/create.php'),
+      Uri.parse('tunishub.com/management_api/api/category/create.php'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },

@@ -18,9 +18,7 @@ class _HomePageState extends State<HomePage> {
   List dataSource;
 
   String formatDateDay(DateTime dateTime) => '${dateTime.day}';
-  String newDate(x) {
-    return DateFormat.MMMEd().format(x);
-  }
+  String newDate(x) => DateFormat.MMMEd().format(x);
 
   getData() async {
     try {
@@ -105,7 +103,8 @@ class _HomePageState extends State<HomePage> {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (_) => InventoryPage(
-                              listInventoryData: listRecords[index].inventory),
+                            listInventoryData: listRecords[index].inventory,
+                          ),
                         ),
                       );
                     },
